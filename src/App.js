@@ -9,8 +9,8 @@ import PhotoShow from './components/PhotoShow'
 function App() {
   return (
     <Container>
-      <Router>
-        <Route path='/' exact component={PhotoDashboard} />
+      <Router basename='/'>
+        <Route exact path='/' component={PhotoDashboard} />
         <Route path='/photos/:id' component={PhotoShow} />
       </Router>
     </Container>
