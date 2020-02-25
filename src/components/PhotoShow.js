@@ -32,7 +32,7 @@ class PhotoShow extends React.Component {
   render() {
     return (
       <div>
-        <Card className="photo-card mt-3 mb-3">
+        <Card className="photo-card mt-4 mb-4">
           <Card.Img src={this.state.href} />
           <hr className="card-hr" />
           <Card.Body>

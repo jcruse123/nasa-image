@@ -15,11 +15,19 @@ class PhotoSearch extends React.Component {
   formHandler = e => {
     e.preventDefault()
     this.props.searchUpdate(this.state.searchTerms)
+    this.props.history.push('/')
+    this.setState({
+      searchTerms: ''
+    })
   }
 
   onSearchClick = e => {
     e.preventDefault()
     this.props.searchUpdate(this.state.searchTerms)
+    this.props.history.push('/')
+    this.setState({
+      searchTerms: ''
+    })
   }
 
   onSearchChange = e => {

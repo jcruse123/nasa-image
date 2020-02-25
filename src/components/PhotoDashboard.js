@@ -1,7 +1,10 @@
 import React from 'react'
 import axios from 'axios'
+import { BrowserRouter as HashRouter, Route } from 'react-router-dom';
+import { Redirect } from 'react-router-dom'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import PhotoGrid from './PhotoGrid'
+import PhotoShow from './PhotoShow'
 import PhotoSearch from './PhotoSearch'
 import logo from '../img/nasa-logo.png'
 
@@ -52,6 +55,7 @@ class PhotoDashboard extends React.Component {
                 href: image.links[0].href
               }
             })
+
           })
         })
       }
@@ -69,8 +73,24 @@ class PhotoDashboard extends React.Component {
           Click any image for more information.
         </p>
       </Jumbotron>
-        <PhotoSearch searchUpdate = {this.searchUpdate} {...this.props} />
-        <PhotoGrid photos={this.state.photos} {...this.props} />
+        <HashRouter basename='/nasa-image'>
+          <Route
+            path='*'
+            render={(props) => <PhotoSearch searchUpdate = {this.searchUpdate} {...props} />}
+          />
+          <Route
+            exact
+            path='/'
+            render={(props) => <PhotoGrid photos={this.state.photos} {...props} />}
+          />
+          <Route
+            path='/photos/:id'
+            render={(props) => <PhotoShow {...props} />}
+          />
+          <Route
+            render={(props) => <Redirect to='/' {...props} />}
+          />
+        </HashRouter>
       </div>
     )
   }
