@@ -1,3 +1,11 @@
+body {
+  background-image: url("/nasa-image/bg.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .logo {
   width: 300px;
 }
@@ -6,9 +14,20 @@
   .logo {
     width: 200px !important;
   }
+  .display-4 {
+    font-size: 2.5rem;
+  }
 }
 
-.photo {
+.jumbotron {
+  border-radius: 0;
+}
+
+.search-card {
+  border-radius: 0;
+}
+
+.photo-card {
   border-radius: 0;
 }
 

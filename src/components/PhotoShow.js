@@ -41,7 +41,9 @@ class PhotoShow extends React.Component {
             <Card.Text>
               {this.state.description}
             </Card.Text>
-            <Button href={this.state.href} variant="primary">Download Image</Button>
+            <div className="text-left">
+              <Button href={this.state.href} variant="primary">Download Image</Button>
+            </div>
           </Card.Body>
         </Card>
       </div>

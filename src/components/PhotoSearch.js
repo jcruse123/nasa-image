@@ -1,4 +1,7 @@
 import React from 'react'
+import Card from 'react-bootstrap/Card'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
@@ -27,14 +30,24 @@ class PhotoSearch extends React.Component {
 
   render() {
     return (
-      <Form onSubmit={this.formHandler}>
-        <Form.Group controlId="formBasicEmail">
-          <Form.Control type="text" placeholder="" value={this.state.searchTerms} onChange={this.onSearchChange} />
-        </Form.Group>
-        <Button variant="primary" onClick={this.onSearchClick}>
-          Search
-        </Button>
-      </Form>
+      <Card className="search-card">
+        <Card.Body className="pb-0">
+          <Form onSubmit={this.formHandler}>
+            <Row>
+              <Col xs={12} sm={9}>
+                <Form.Group controlId="formBasicEmail">
+                  <Form.Control type="text" placeholder="" value={this.state.searchTerms} onChange={this.onSearchChange} />
+                </Form.Group>
+              </Col>
+              <Col xs={12} sm={3}>
+                <Button className="mb-3" block variant="primary" onClick={this.onSearchClick}>
+                  Search
+                </Button>
+              </Col>
+            </Row>
+          </Form>
+        </Card.Body>
+      </Card>
     )
   }
 }

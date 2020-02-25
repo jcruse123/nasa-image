@@ -65,9 +65,8 @@ class PhotoDashboard extends React.Component {
         <h1 className="display-4">Image Library</h1>
         <hr />
         <p>
-          This application searches NASA's image library for images.
-
-          Powered by React.
+          Search the NASA photo library.
+          Click any photo for more information.
         </p>
       </Jumbotron>
         <PhotoSearch searchUpdate = {this.searchUpdate} {...this.props} />
