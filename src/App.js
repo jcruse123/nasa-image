@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as HashRouter, Route } from 'react-router-dom';
 import Container from 'react-bootstrap/Container'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './app.css'
@@ -9,10 +9,10 @@ import PhotoShow from './components/PhotoShow'
 function App() {
   return (
     <Container>
-      <Router basename='/'>
+      <HashRouter basename='/nasa-image'>
         <Route exact path='/' component={PhotoDashboard} />
         <Route path='/photos/:id' component={PhotoShow} />
-      </Router>
+      </HashRouter>
     </Container>
   );
 }
