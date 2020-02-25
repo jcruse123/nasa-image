@@ -16,7 +16,6 @@ class PhotoShow extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props.match.params.id)
     axios.get(`https://images-api.nasa.gov/search?nasa_id=${this.props.match.params.id}&media_type=image`)
       .then(response => {
         this.setState({

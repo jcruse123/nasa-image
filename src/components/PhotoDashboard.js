@@ -20,7 +20,8 @@ class PhotoDashboard extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`https://images-api.nasa.gov/search?q=${this.state.search}&media_type=image`)
+    // axios.get(`https://images-api.nasa.gov/search?q=${this.state.search}&media_type=image`)
+    axios.get(`https://images-api.nasa.gov/asset/?orderby=popular`)
       .then(response => {
         this.setState({
           photos: response.data.collection.items.map(image => {
