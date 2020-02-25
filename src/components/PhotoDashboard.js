@@ -60,7 +60,7 @@ class PhotoDashboard extends React.Component {
   render() {
     return (
       <div>
-      <Jumbotron className="text-center mt-3">
+      <Jumbotron className="text-center mt-4 mb-4">
         <img src={logo} alt="nasa logo" className="logo" />
         <h1 className="display-4">Image Library</h1>
         <hr />

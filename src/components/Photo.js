@@ -10,7 +10,7 @@ class Photo extends React.Component {
 
   render() {
     return (
-        <Card onClick={this.onPhotoClick} className="photo-card">
+        <Card onClick={this.onPhotoClick} className="photo-card mb-4">
           <Card.Img src={this.props.href} />
         </Card>
     )

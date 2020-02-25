@@ -18,7 +18,7 @@ class PhotoGrid extends React.Component {
     ))
 
     return (
-      <div className="card-columns mt-3 mb-3">
+      <div className="card-columns mt-4 mb-4">
         {photos}
       </div>
     )
