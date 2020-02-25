@@ -33,15 +33,16 @@ class PhotoShow extends React.Component {
   render() {
     return (
       <div>
-        <Card className="photo mt-3 mb-3">
+        <Card className="photo-card mt-3 mb-3">
           <Card.Img src={this.state.href} />
           <hr className="card-hr" />
           <Card.Body>
-            <Card.Title>{this.state.title}</Card.Title>
+            <Card.Title className="display-4 card-title">{this.state.title}</Card.Title>
+            <hr />
             <Card.Text>
               {this.state.description}
             </Card.Text>
-            <div className="text-left">
+            <div className="text-right">
               <Button href={this.state.href} variant="primary">Download Image</Button>
             </div>
           </Card.Body>
